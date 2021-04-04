@@ -6,10 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.ecommerce.pedritastore.model.Usuario;
 
 @Repository
-public interface UsuarioRepository {
+public interface UsuarioRepository extends JpaRepository<Long,Usuario> {
 	
-	public interface StoreRepository extends JpaRepository<Long,Usuario> {
-		
-	}
-
 }

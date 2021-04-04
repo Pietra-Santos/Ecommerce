@@ -6,9 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.ecommerce.pedritastore.model.Produto;
 
 @Repository
-public interface ProdutoRepository {
-	public interface StoreRepository extends JpaRepository<Long,Produto> {
-		
-	}
+public interface ProdutoRepository extends JpaRepository<Long,Produto> {
 		
 }

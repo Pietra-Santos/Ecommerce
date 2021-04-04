@@ -33,6 +33,9 @@ public class Usuario {
     @OneToMany(mappedBy="usuario", cascade = CascadeType.ALL)
     private List<Store> stores;
     
+    @OneToMany(mappedBy="usuario", cascade = CascadeType.ALL)
+    private List<Produto> produtos;
+    
     public Usuario() {}
     
     public String getNome() {

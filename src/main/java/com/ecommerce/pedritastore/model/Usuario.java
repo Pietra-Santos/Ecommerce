@@ -18,7 +18,7 @@ public class Usuario {
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private long idUsuario;
+    private Long idUsuario;
 
     @NotNull
     @Size(min = 12, max= 100)
@@ -35,6 +35,9 @@ public class Usuario {
     
     @OneToMany(mappedBy="usuario", cascade = CascadeType.ALL)
     private List<Produto> produtos;
+    
+    @OneToMany(mappedBy="usuario", cascade = CascadeType.ALL)
+    private List<Inscricao> inscricoes;
     
     public Usuario() {}
     

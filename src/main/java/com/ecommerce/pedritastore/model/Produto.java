@@ -17,7 +17,7 @@ public class Produto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idProduto;
+    private Long idProduto;
 
     @NotNull
     @Size(min = 5, max= 100)

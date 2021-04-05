@@ -2,6 +2,7 @@ package com.ecommerce.pedritastore.model;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,7 +19,7 @@ import javax.validation.constraints.Size;
 public class Store {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idStore;
+    private Long idStore;
     
     @NotNull
     @Size (min = 5, max = 50 )
@@ -35,6 +36,9 @@ public class Store {
     @OneToMany(mappedBy="store")
     private List<Produto> produtos;
    
+    @OneToMany(mappedBy="store", cascade = CascadeType.ALL)
+    private List<Inscricao> inscricoes;
+
     public Store() {}
     
     public long getIdStore() {

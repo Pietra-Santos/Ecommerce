@@ -7,5 +7,7 @@ import com.ecommerce.pedritastore.model.Store;
 
 @Repository
 public interface StoreRepository extends JpaRepository<Store,Long> {
+
+	Object findAllByNomeStoreContainingIgnoreCase(String nome);
 	
 }
